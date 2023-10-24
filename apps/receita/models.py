@@ -10,9 +10,8 @@ class AutorModels(models.Model):
         return self.nome
 
 
-# Create your models here.
 class ReceitaModels(models.Model):
-    autor = models.ForeignKey(AutorModels, on_delete=models.CASCADE, default=1)
+    autor_id = models.ForeignKey(AutorModels, on_delete=models.CASCADE)
     titulo_receita = models.CharField(max_length=40, blank=False, null=False)
     descricao_receita = models.TextField(max_length=2000, blank=False, null=False)
 
