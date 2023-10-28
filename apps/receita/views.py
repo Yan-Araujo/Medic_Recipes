@@ -5,6 +5,7 @@ from apps.receita.models import ReceitaModels, AutorModels
 from apps.receita.serializer import ReceitaSerializer, AutorSerializer
 from rest_framework.authentication import BasicAuthentication
 from rest_framework.permissions import IsAuthenticated
+from rest_framework import generics
 
 
 class ReceitaViewSet(viewsets.ModelViewSet):
