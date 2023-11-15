@@ -25,7 +25,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.receita.apps.ReceitaConfig',
+    'receita.apps.ReceitaConfig',
     'rest_framework',
     'rest_framework_simplejwt',
     'django_filters',
@@ -122,3 +122,5 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 5
 }
+
+AUTH_USER_MODEL = "receita.UsuarioModels"
