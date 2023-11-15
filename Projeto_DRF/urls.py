@@ -1,15 +1,16 @@
 from django.contrib import admin
-from django.urls import path
-from rest_framework import routers
-from apps.receita.views import ReceitaViewSet, AutorViewSet
+from django.urls import path, include
+# from rest_framework import routers
+# from apps.receita.views import ReceitaViewSet, AutorViewSet
+#
+# router = routers.DefaultRouter()
+# router.register('receitas', ReceitaViewSet, basename='Receita')
+# router.register('autores', AutorViewSet, basename='Autor')
+#
+#
+# urlpatterns = router.urls
 
-router = routers.DefaultRouter()
-router.register('receitas', ReceitaViewSet, basename='Receita')
-router.register('autores', AutorViewSet, basename='Autor')
-
-
-urlpatterns = router.urls
-
-urlpatterns += [
+urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', include('apps.receita.urls'))
 ]
